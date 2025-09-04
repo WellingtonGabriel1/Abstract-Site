@@ -1,0 +1,42 @@
+✅ Exemplo Completo: Botão "Voltar ao Topo" no canto inferior direito
+🔹 HTML
+<!-- Âncora no topo da página -->
+<a id="top"></a>
+
+<!-- Botão de voltar ao topo -->
+<button id="voltarAoTopo">⬆️</button>
+
+🔹 CSS
+#voltarAoTopo {
+  position: fixed;
+  bottom: 20px;      /* distância do fundo */
+  right: 20px;       /* distância da direita */
+  padding: 10px 15px;
+  font-size: 20px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+#voltarAoTopo:hover {
+  background-color: #555;
+}
+
+🔹 JavaScript
+<script>
+  document.getElementById("voltarAoTopo").addEventListener("click", function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
+
+✅ Explicando:
+
+position: fixed; faz o botão ficar parado no canto da tela, mesmo rolando.
+
+bottom e right definem a posição no canto inferior direito.
+
+window.scrollTo({ top: 0, behavior: 'smooth' }) faz a rolagem suave até o topo.
